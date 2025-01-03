@@ -1,4 +1,10 @@
 name: 工作流测试      # 可选，定义工作流的名称
-on:                  # on 触发工作流的事件 
-  push:              # 当代码推送时触发
+on: push             # 当代码推送时触发
 jobs:                # 定义工作流中的作业
+  job1:
+    steps:
+    - run: pwd
+    - run: ls
+  job2:
+    steps:
+    - run: node --version
